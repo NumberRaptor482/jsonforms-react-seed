@@ -3,30 +3,45 @@
   "properties": {
     "name": {
       "type": "string",
-      "minLength": 1
+      "enum": ["Person 1", "Person 2", "Person 3"]
     },
-    "description": {
-      "title": "Long Description",
-      "type": "string"
-    },
-    "done": {
-      "type": "boolean"
-    },
-    "due_date": {
+    "match": {
       "type": "string",
-      "format": "date"
+      "enum": ["1", "2", "3"]
     },
-    "rating": {
-      "type": "integer",
-      "maximum": 5
-    },
-    "recurrence": {
+    "taxi": {
       "type": "string",
-      "enum": ["Never", "Daily", "Weekly", "Monthly"]
+      "enum": ["True", "False"]
     },
-    "recurrence_interval": {
+    "auton_lower": {
+      "type": "integer"
+    },
+    "auton_upper": {
+      "type": "integer"
+    },
+    "teleop_lower": {
+      "type": "integer"
+    },
+    "teleop_upper": {
+      "type": "integer"
+    },
+    "bar": {
+      "type": "string",
+      "enum": ["Low", "Middle", "High", "Traversal"]
+    },
+    "mood": {
       "type": "integer"
     }
   },
-  "required": ["name", "due_date"]
+  "required": [
+    "name",
+    "match",
+    "taxi",
+    "auton_lower",
+    "auton_upper",
+    "teleop_lower",
+    "teleop_upper",
+    "bar",
+    "mood"
+  ]
 }

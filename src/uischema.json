@@ -3,53 +3,42 @@
   "elements": [
     {
       "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/due_date"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/description",
+      "scope": "#/properties/name",
       "options": {
-        "multi": true
+        "autocomplete": true
       }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/match"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/taxi"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/auton_lower"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/auton_upper"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/teleop_lower"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/teleop_upper"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/bar"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/mood"
     }
   ]
 }

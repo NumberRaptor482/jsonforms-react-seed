@@ -14,6 +14,8 @@ import {
 import RatingControl from './RatingControl';
 import ratingControlTester from './ratingControlTester';
 import { makeStyles } from '@mui/styles';
+import buttonControlTester from './buttonControlTester';
+import ButtonControl from './ButtonControl';
 
 const useStyles = makeStyles({
   container: {
@@ -37,22 +39,28 @@ const useStyles = makeStyles({
   },
   demoform: {
     margin: 'auto',
+    width: '250px',
     padding: '1rem',
   },
 });
 
 const initialData = {
-  name: 'Send email to Adrian',
-  description: 'Confirm if you have passed the subject\nHereby ...',
-  done: true,
-  recurrence: 'Daily',
-  rating: 3,
+  name: 'Person 1',
+  match: '1',
+  taxi: 'False',
+  auton_lower: 0,
+  auton_upper: 0,
+  teleop_lower: 0,
+  teleop_upper: 0,
+  bar: 'Low',
+  mood: 0,
 };
 
 const renderers = [
   ...materialRenderers,
   //register custom renderers
   { tester: ratingControlTester, renderer: RatingControl },
+  { tester: buttonControlTester, renderer: ButtonControl },
 ];
 
 const App = () => {
@@ -66,13 +74,13 @@ const App = () => {
 
   return (
     <Fragment>
-      <div className='App'>
+      {/* <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <h1 className='App-title'>Welcome to JSON Forms with React</h1>
           <p className='App-intro'>More Forms. Less Code.</p>
         </header>
-      </div>
+      </div> */}
 
       <Grid
         container
@@ -80,7 +88,7 @@ const App = () => {
         spacing={1}
         className={classes.container}
       >
-        <Grid item sm={6}>
+        {/* <Grid item sm={6}>
           <Typography variant={'h4'} className={classes.title}>
             Bound data
           </Typography>
@@ -95,10 +103,10 @@ const App = () => {
           >
             Clear data
           </Button>
-        </Grid>
+        </Grid> */}
         <Grid item sm={6}>
           <Typography variant={'h4'} className={classes.title}>
-            Rendered form
+            5411 Scouting
           </Typography>
           <div className={classes.demoform}>
             <JsonForms
